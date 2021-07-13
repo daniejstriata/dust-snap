@@ -16,7 +16,7 @@ architectures:
 
 apps:
   dust:
-    command: usr/local/bin/dust
+    command: dust
 
 parts: 
   dust:
