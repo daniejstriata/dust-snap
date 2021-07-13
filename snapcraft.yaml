@@ -1,0 +1,29 @@
+name: dust 
+adopt-info: dust
+summary: dust (du + rust = dust) is a alternative to 'du' written in rust.
+description: |
+  dust provides a fast way to see directories sizes on your device.
+
+
+base: core20
+grade: stable 
+confinement: classic
+license: MIT
+
+architectures:
+- build-on: amd64
+
+
+apps:
+  dust:
+    command: usr/local/bin/dust
+
+parts: 
+  dust:
+    source: https://github.com/bootandy/dust.git
+    source-type: git
+    plugin: rust
+    
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version "$(git describe --tags `git rev-list --tags --max-count=1`)"
