@@ -5,17 +5,28 @@ description: |
   dust provides a fast way to see directories sizes on your device.
 base: core20
 grade: stable 
-confinement: classic
+confinement: strict
 license: MIT
 
 
 architectures:
 - build-on: amd64
 
+apps:
+  ncdu:
+    aliases: 
+      - ncdu
+    command: ncdu
+
 
 apps:
   dust:
     command: bin/dust
+    plugs:
+      - home
+      - removable-media
+      - mount-observe
+      - system-backup # testing 
 
 parts: 
   dust:
