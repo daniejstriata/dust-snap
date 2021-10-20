@@ -36,4 +36,4 @@ parts:
     
     override-pull: |
       snapcraftctl pull
-      snapcraftctl set-version "$(git describe --tags `git rev-list --tags --max-count=1`)"
+      snapcraftctl set-version "$(git tag -l --sort=refname | tail -n 1)"
