@@ -10,8 +10,8 @@ license: MIT
 
 
 architectures:
-- build-on: amd64
-- build-on: arm64
+  - amd64
+  - arm64
 
 apps:
   dust:
