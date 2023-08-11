@@ -11,13 +11,7 @@ license: MIT
 
 architectures:
 - build-on: amd64
-
-apps:
-  ncdu:
-    aliases: 
-      - ncdu
-    command: ncdu
-
+- build-on: arm64
 
 apps:
   dust:
