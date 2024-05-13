@@ -8,14 +8,9 @@ grade: stable
 confinement: strict
 license: MIT
 
-
 architectures:
-  amd64:
-    build-on: amd64
-    build-for: amd64
-  arm64:
-    build-on: arm64
-    build-for: arm64
+  - arm64
+  - amd64
 
 apps:
   dust:
