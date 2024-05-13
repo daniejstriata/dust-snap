@@ -3,7 +3,7 @@ adopt-info: dust
 summary: dust (du + rust = dust) is a alternative to 'du' written in rust.
 description: |
   dust provides a fast way to see directories sizes on your device.
-base: core20
+base: core22
 grade: stable 
 confinement: strict
 license: MIT
